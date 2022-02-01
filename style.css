@@ -1,0 +1,131 @@
+
+body{
+    background-color:rgb(42, 95, 126);
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+nav{
+    width: 100%;
+    background-color: gray;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+.col1,.col2,.col3{
+    padding: 5px;
+}
+.col2{
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+
+    background-color:white;
+    display: flex;
+    align-items: end;
+    position: absolute;
+    bottom: 15px;
+    border:5px solid red;
+    padding: 20px;
+    border-radius: 40px;
+
+}
+.singleBar{
+
+    background: cyan;
+    border: 1px solid black;
+    width:10px;
+
+}
+
+.btn{
+    color: #26ff00;
+    background-color: inherit;
+    transition: ease-out 0.3s;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-style: none;
+    border: 2px solid #26ff00;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase; 
+    font-family: serif;   
+    padding: 2px 5px;
+    display: inline-block;
+    margin: 2px;
+}
+.btn:hover{
+    color: black;
+    cursor:pointer;
+}
+.btn::before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #26ff00;
+}
+.btn:hover::before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+h1{
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 1px;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+}
+.range{
+    height: 80px;
+    width: 380px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 65px 0 45px;
+}
+
+@media only screen and (max-width: 600px) {
+    .singleBar {
+      width: 5px;
+    }
+}

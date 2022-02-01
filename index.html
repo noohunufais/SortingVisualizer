@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>testing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>   
+  <nav>
+    <h1>Sorting Visualizer</h1>
+    <div class="row">
+      <div class="col1" id="newarray">
+        <button class="btn newArray">New Array</button>
+      </div>
+      <div class="col2" id="input">
+        <span id="size">Size
+          <input id="arr_sz" type="range" min="5" max="60" step=5 value=30>
+        </span>
+        <span id="speed">Speed
+          <input id="speed_input" type="range" min="0" max="1500" step=50 value=750>
+        </span>
+      </div>
+
+      <div class="col3">
+        <button class="btn bubbleSort">Bubble Sort</button>
+        <button class="btn selectionSort">Selection Sort</button>
+        <button class="btn insertionSort">Insertion Sort</button>
+        <button class="btn quickSort">Quick Sort</button>
+        <button class="btn mergeSort">Merge Sort</buttno>
+      </div>
+    </div>
+  </nav> 
+  <div id="bars" class="container"></div>
+
+  <script src="script/main.js"></script>
+  <script src="script/bubble.js"></script>
+  <script src="script/insertion.js"></script>
+  <script src="script/selection.js"></script>
+  <script src="script/merge.js"></script>
+  <script src="script/quick.js"></script>
+
+</body>
+</html>
